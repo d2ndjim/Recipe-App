@@ -10,28 +10,34 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
+  <br />
+  <div class="form-group>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"form-control", placeholder:"Name" %>
+  </div>
+  <br />
+  <div class="form-group">
+    <% form.label :measurement_unit, style: "display: block" %>
+    <%= form.text_field :measurement_unit, class:"form-control", placeholder:"Measurement Unit" %>
+  </div>
+  <br />
+  <div class="form-group">
+    <% form.label :price, style: "display: block"%>
+    <%= form.number_field :price, class:"form-control", placeholder:"Price" %>
+  </div>
+  <br />
+  <div class="form-group">
+    <% form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity, class:"form-control", placeholder:"Quantity" %>
   </div>
 
-  <div>
-    <%= form.label :measurement_unit, style: "display: block" %>
-    <%= form.text_field :measurement_unit %>
+  <div class="form-group">
+    <%= form.number_field :user_id, id: :food_user_id, class:"form-control", value: current_user.id, type: :hidden %>
   </div>
-
+  <br />
   <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.number_field :price %>
-  </div>
-
-  <div>
-    <%= form.label :quantity, style: "display: block" %>
-    <%= form.number_field :quantity %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-secondary text-white bg-black" %>
   </div>
 <% end %>
+
+
