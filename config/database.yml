@@ -9,7 +9,7 @@ development:
   database: Recipe_App_development
   pool: 5
   username: postgres
-  password: 12345
+  password: postgres
 
 test:
   adapter: postgresql
@@ -17,7 +17,7 @@ test:
   database: Recipe_App_test
   pool: 5
   username: postgres
-  password: 12345
+  password: postgres
 
 production:
   <<: *default
