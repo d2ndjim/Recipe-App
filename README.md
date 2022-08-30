@@ -19,7 +19,7 @@ The project requirements can be viewed [here](https://github.com/microverseinc/c
 ## Usage
 
 Run the following commands:</br>
-`git clone https://github.com/Hombre2014/Recipe-App.git`</br>
+`git clone https://github.com/d2ndjim/Recipe-App.git`</br>
 `cd Recipe-App`</br>
 `bundle install`</br>
 `rails s`</br>
