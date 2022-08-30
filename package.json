@@ -1,0 +1,16 @@
+{
+  "name": "app",
+  "private": "true",
+  "scripts": {
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16"
+  },
+  "devDependencies": {
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}
