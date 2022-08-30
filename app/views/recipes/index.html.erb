@@ -8,7 +8,7 @@
       <div class="d-flex p-3">
         <div>
           <%= link_to recipe_path(r.id), id: "recipe_path#{r.id}", class: "text-decoration-none" do %>
-          <h5 class="me-5"><%= r.name%></h5>
+          <h5><%= r.name%></h5>
           <% end %>
           <div>
             <%if can? :destroy, r %> <%= button_to "Delete", recipe_path(r.id),
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div>
-          <p class="ml-5"><%= r.description%></p>
+          <p class="px-5"><%= r.description%></p>
         </div>
       </div>
     </li>
