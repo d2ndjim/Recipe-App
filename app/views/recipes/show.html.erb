@@ -29,7 +29,7 @@
         <p><%= @recipe.description %></p>
       </div>
       <div class="d-flex">
-        <% if user_signed_in? %>
+        <% if current_user.id == @recipe.user_id %>
           <div class="d-flex w-100 justify-content-between mb-3">
             <%= link_to "Generate Shopping list", recipe_shopping_lists_path(@recipe.id), :class => "btn btn-success btn-gen" %>
             <%= link_to "Add ingredient", new_recipe_recipe_food_path(@recipe) , class: "btn btn-success btn-gen "%>
@@ -55,11 +55,8 @@
             <td><%= food.quantity  %> x <%= food.food.measurement_unit %></td>
             <td>$<%= food.food.price * food.quantity %></td>
             <td class="table-btn d-flex flex-row justify-content-between">
-              <% if user_signed_in? %>
               <% if can? :destroy, @recipe %>
                 <%=button_to "Delete", recipe_recipe_food_path(recipe_id: @recipe.id, id: food.id), method: :delete, class:"btn btn-outline-danger btn-sm"%>
-                <%=link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: food.id), class:"btn btn-outline-primary btn-sm"%>
-              <%end%>
               <%end%>
             </td>
           </tr>

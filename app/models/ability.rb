@@ -9,7 +9,7 @@ class Ability
     else
       can :manage, Recipe, user_id: user.id
       can :manage, Food, user_id: user.id
-      can :manage, Recipe do |recipe|
+      can :read, Recipe do |recipe|
         recipe.user == user || recipe.public == true || !recipe.user_id?
       end
     end
